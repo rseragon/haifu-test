@@ -43,5 +43,7 @@ jobs:
     - name: check haifu daemon
       run: |
         cd haifu/
-        poetry run python haifu.py daemon start 
+        poetry run python haifu.py daemon start &
+        echo 0 | poetry run python haifu.py install zsh
+        
 
