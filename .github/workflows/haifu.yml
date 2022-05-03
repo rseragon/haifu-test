@@ -42,6 +42,5 @@ jobs:
     - name: check haifu daemon
       run: |
         cd haifu/
-        poetry shell
-        python haifu.py daemon start 
+        poetry run python haifu.py daemon start 
 
