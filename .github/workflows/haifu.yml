@@ -37,10 +37,11 @@ jobs:
     - name: setup deps
       run: |
         cd haifu/
+        sudo apt-get install -y python3-dev python3-distutils python-apt
         python setup.py
-        sudo apt-get install -y python3-dev python3-distutils
     - name: check haifu daemon
       run: |
         cd haifu/
+        poetry shell
         python haifu.py daemon start 
 
