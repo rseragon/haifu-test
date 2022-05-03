@@ -36,8 +36,10 @@ jobs:
       uses: snok/install-poetry@v1
     - name: setup deps
       run: |
+        cd haifu/
         python setup.py
     - name: check haifu daemon
       run: |
+        cd haifu/
         python haifu.py daemon start 
 
