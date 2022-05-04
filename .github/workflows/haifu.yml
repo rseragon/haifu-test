@@ -47,5 +47,5 @@ jobs:
         echo 0 | poetry run python haifu.py install gcc
     - name: run tests
       run: |
-        gcc add.c -std=c11 -o add
+        gcc add.c -std=c17 -o add
         ./add
